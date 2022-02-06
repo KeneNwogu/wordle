@@ -42,27 +42,20 @@
 		methods: {
 			inputButton: function (e) {
                 let value = e.target.value
+                console.log(value)
                 if(e.target.value == "ENTER"){
                     this.checkWord(this.current_word)
                 }
-                if(e.target.value == "CANCEL"){
+                if(e.target.value == "CANCEL" || !e.target.value){
+                    console.log('cancel')
                     this.popWord(this.current_word)
                 }
-                if(value != "ENTER" && value != "CANCEL" && this.current_word.length < 5){
+                if(value && value != "ENTER" && value != "CANCEL" && this.current_word.length < 5){
                     this.current_word += e.target.value;
                     console.log(this.current_word)
                 }
 			},
             checkWord: function (word) {
-                // let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
-                // let check_word = fetch(url)
-                //     .then((res) => res.json())
-                //     .then(data => {
-                //         console.log(data)
-                //         return data[0].word;
-                        
-                //     });
-
                 if(word){
                     let alphabet_check = {}
                     for(let i = 0; i < 5; i++){
@@ -90,7 +83,9 @@
                 console.log('alpha check', this.alphabet_check)
             },
             popWord: function() {
-                this.current_word = this.current_word.substring(0, this.current_word.length - 1)
+                let string = this.current_word.substring(0, this.current_word.length - 1)
+                console.log('string', string)
+               this.current_word = string
             }
 		},
 	};

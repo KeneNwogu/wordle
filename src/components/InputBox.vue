@@ -32,8 +32,8 @@
             <input type="button" id="" class="input" maxlength="1" value="B" @click="inputButton($event)" :class="alphabet_check['B']">
             <input type="button" id="" class="input" maxlength="1" value="N" @click="inputButton($event)" :class="alphabet_check['N']">
             <input type="button" id="" class="input" maxlength="1" value="M" @click="inputButton($event)" :class="alphabet_check['M']">
-            <button type="button" id="" class="input" maxlength="1" value="CANCEL" @click="inputButton($event)">
-                <img id="cancel" src="../assets/icons8-backspace-49.png" alt="" srcset="">
+            <button id="" class="input" value="CANCEL" @click="inputButton($event)">
+                <img value="CANCEL" id="cancel" src="../assets/icons8-backspace-49.png" alt="" srcset="">               
             </button>
         </div>
     </div>
