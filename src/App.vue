@@ -1,5 +1,6 @@
 <template>
 	<!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+    <NavBar />
 	<Guess 
         :current_word="current_word" 
         :alphabet_check="alphabet_check"
@@ -18,12 +19,14 @@
 <script>
 	import Guess from "./components/Guess.vue";
 	import InputBox from "./components/InputBox.vue";
+    import NavBar from "./components/NavBar.vue";
 
 	export default {
 		name: "App",
 		components: {
 			Guess,
 			InputBox,
+            NavBar
 		},
 
 		data() {
@@ -101,5 +104,9 @@
 	text-align: center;
 	color: #2c3e50;
 	margin-top: 60px;
+}
+
+*{
+    margin: 0;
 }
 </style>

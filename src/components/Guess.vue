@@ -43,24 +43,28 @@ export default {
     .guess{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
         margin: 0 auto;
         justify-content: space-around;
-        width: 60%;
+        width: 80%;
         margin-bottom: 12px;
     }
     .guess > div {
-        display: inline;
+        display: flex;
+        /* width: 12%; */
     }
     .guess > div > input{
-        width: 12%;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         text-align: center;
         background-color: white;
         border: 1px solid grey;
-        padding: 12px;
+        /* padding: 15px; */
         line-height: 15px;
         margin-right: 10px;
+        min-height: 100%;
+        border: 0.18em solid rgb(172, 172, 172);
         /* border: none; */
         /* margin-right: -20%; */
     }

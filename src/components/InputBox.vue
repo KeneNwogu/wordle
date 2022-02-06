@@ -24,7 +24,7 @@
             <input type="button" id="" class="input" maxlength="1" value="L" @click="inputButton($event)" :class="alphabet_check['L']">
         </div>
         <div class="row width-95">
-            <input type="button" id="" class="input" maxlength="1" value="ENTER" @click="inputButton($event)">
+            <input type="button" id="" class="input enter" maxlength="1" value="ENTER" @click="inputButton($event)">
             <input type="button" id="" class="input" maxlength="1" value="Z" @click="inputButton($event)" :class="alphabet_check['Z']">
             <input type="button" id="" class="input" maxlength="1" value="X" @click="inputButton($event)" :class="alphabet_check['X']">
             <input type="button" id="" class="input" maxlength="1" value="C" @click="inputButton($event)" :class="alphabet_check['C']">
@@ -32,7 +32,9 @@
             <input type="button" id="" class="input" maxlength="1" value="B" @click="inputButton($event)" :class="alphabet_check['B']">
             <input type="button" id="" class="input" maxlength="1" value="N" @click="inputButton($event)" :class="alphabet_check['N']">
             <input type="button" id="" class="input" maxlength="1" value="M" @click="inputButton($event)" :class="alphabet_check['M']">
-            <input type="button" id="" class="input" maxlength="1" value="CANCEL" @click="inputButton($event)">
+            <button type="button" id="" class="input" maxlength="1" value="CANCEL" @click="inputButton($event)">
+                <img id="cancel" src="../assets/icons8-backspace-49.png" alt="" srcset="">
+            </button>
         </div>
     </div>
 </template>
@@ -40,7 +42,10 @@
 <style>
     .input-box{
         position: absolute;
-        top: calc(90% - 108px);
+        top: calc(89% - 108px);
+        left: calc(50% - 165px);
+        margin: 0 auto;
+        margin-top: 10px;
     }
     .row{
         display: flex;
@@ -58,18 +63,26 @@
     .width-80{
         width: 85%;
     }
-
+    button{
+        background-color: rgb(207, 208, 208);
+        border: none;
+        border-radius: 7px;
+        height: 40px;
+    }
     .row > input{
         padding: 10px;
-        width: 8%;
+        width: 10%;
         height: 40px;
         text-align: center;
         line-height: 20px;
         border: none;
         background-color: rgb(207, 208, 208);
         border-radius: 7px;
+        margin-right: 4px;
     }
-
+    .green, .yellow, .black{
+        border: none !important;
+    }
     .green{
         background-color: green !important;
         color: white;
@@ -83,6 +96,13 @@
     .black{
         background-color: black !important;
         color: white;
+    }
+    .enter{
+        width: fit-content !important;
+        padding: 4px !important;
+    }
+    #cancel{
+        width: fit-content;
     }
 </style>
 
